@@ -1,0 +1,6 @@
+image: outeredge/edge-docker-drone-base
+docker:
+  net: host
+script:
+  - git-timestamp composer.json
+  - git-timestamp composer.lock
