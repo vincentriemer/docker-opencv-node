@@ -1,3 +1,12 @@
 image: outeredge/edge-docker-drone-base
 docker:
   net: host
+publish:
+    docker:
+        docker_host: tcp://127.0.0.1:2377
+        registry_login_url: $REGISTRY_URL
+        registry_login: true
+        keep_build: true
+        username: $REGISTRY_USER
+        password: $REGISTRY_PASS
+        image_name: $REGISTRY_URL/$IMAGE_NAME
